@@ -13,7 +13,8 @@
                 text-align: center;
                 width: 100%;
                 height: 100%;
-                position: relative; 
+                position: relative;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
             .video {
@@ -30,14 +31,38 @@
             .sneaky-top {
                 position: absolute;
                 pointer-events: none;
-                background: url("https://upload.wikimedia.org/wikipedia/commons/a/ac/White_flag_of_surrender.svg");
+                background-color: #ffffff;
+            }
+
+            .sneaky-top button {
+                top: 45%;
+                left: 40%;
+                position: absolute;
+                pointer-events: none;
+                width: 20%;
+                height: 10%;
+                padding: 10px;
+                border-radius: 20px;
+                font-size: 3vw;
+                color: #992135;
+                background-color: #ffffff;
+                border: 5px solid #992135;
+                transition: color .4s, background-color .4s;
+            }
+
+            .sneaky-top button:hover {
+                background-color: #992135;
+                color: #ffffff;
+                transition: color .4s, background-color .4s;
             }
         </style>
     </head>
     <body>
-        <div onclick = 'console.log("clicked")'>
+        <div>
             <div id = "show" class="vid-blocker"></div>
-            <div id = "hide" class = "sneaky-top"></div>
+            <div id = "hide" class = "sneaky-top">
+                <button>ENTER</button>
+            </div>
             <div id="player" class = "video"></div>
         </div>
     </body>
